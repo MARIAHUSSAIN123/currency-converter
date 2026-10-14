@@ -1,0 +1,165 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    padding: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2,
+        #d8b4fe
+    );
+}
+
+/* Heading */
+h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Input */
+#rupees {
+    width: 100%;
+    max-width: 400px;
+
+    padding: 18px 20px;
+
+    font-family: inherit;
+    font-size: 16px;
+    color: #31204f;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 2px solid transparent;
+    border-radius: 16px;
+    outline: none;
+
+    box-shadow: 0 10px 25px rgba(38, 20, 75, 0.12);
+
+    transition: 0.3s ease;
+}
+
+/* Input Focus */
+#rupees:focus {
+    border-color: #f0abfc;
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Placeholder */
+#rupees::placeholder {
+    color: #a49ab8;
+}
+
+/* Convert Button */
+button {
+    width: 100%;
+    max-width: 400px;
+
+    padding: 16px 25px;
+
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #ec4899,
+        #9333ea
+    );
+
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(91, 33, 182, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+    transform: translateY(-4px);
+
+    background: linear-gradient(
+        135deg,
+        #db2777,
+        #7c3aed
+    );
+
+    box-shadow: 0 15px 30px rgba(91, 33, 182, 0.4);
+}
+
+/* Button Click */
+button:active {
+    transform: scale(0.97);
+}
+
+/* Result */
+#result {
+    width: 100%;
+    max-width: 400px;
+    min-height: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 18px;
+    overflow-wrap: anywhere;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #6d28d9;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+
+    box-shadow: 0 10px 25px rgba(38, 20, 75, 0.12);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+        gap: 18px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    #rupees,
+    button,
+    #result {
+        max-width: 100%;
+    }
+}
